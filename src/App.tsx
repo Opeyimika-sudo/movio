@@ -2,6 +2,7 @@ import {useEffect} from 'react'
 import './App.css'
 import { fetchMovies } from './movieSlice'
 import { useAppDispatch, useAppSelector } from './store'
+import { Header } from './components/Header'
 
 function App() {
   const movies = useAppSelector((state) => state.movies.movies);
@@ -11,7 +12,7 @@ function App() {
   }, [dispatch])
   return (
     <>
-      
+      <Header/>
     </>
   )
 }
