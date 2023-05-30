@@ -24,6 +24,7 @@ const initialState = {
 // https://api.themoviedb.org/3/search/tv?query=vampire&include_adult=false&language=en-US&page=1&api_key=48effb87d59d70b59702173174665147
 
 // for trending 
+// https://api.themoviedb.org/3/trending/all/day?language=en-US&page=10&api_key=48effb87d59d70b59702173174665147
 
 
 export const fetchMovies = createAsyncThunk("movies/fetch", 
@@ -32,8 +33,6 @@ export const fetchMovies = createAsyncThunk("movies/fetch",
             method: "GET"
         });
         const data = await response.json();
-        console.log(data);
-        localStorage.setItem("now", JSON.stringify(data));
         return data;
     }
 )
